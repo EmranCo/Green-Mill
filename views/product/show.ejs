@@ -1,0 +1,39 @@
+<!-- created by : ابراهيم العبدالسلام -->
+
+
+<%- include('../partials/header.ejs') -%>
+    <%- include('../partials/navbar.ejs') -%>
+        <div class="container">
+            <div class="row mt-4">
+
+                <div class="col-md-9 offset-md-1">
+                    <div class="card">
+
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <%=product.title %>
+                            </h5>
+                            <hr>
+                            <p class="card-text">
+                                <%=product.type%>
+                            </p>
+                            <p>
+                                <%=product.price%> SAR
+                            </p>
+                            <p><span class="badge badge-secondary"><%=product.date.toDateString()%></span></p>
+
+                            <% if ((user) && (user.id == product.user_id )) {%>
+                                <a href="<%= '/products/edit/' + product.id %>" class="btn text-light nav-green">Edit</a>
+                                <button class="btn btn-danger" onclick="deleteProduct()" id="deleteBtn" data-id="<%= product.id%>">Delete</button>
+                                <%}%>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <%- include('../partials/footer.ejs') -%>

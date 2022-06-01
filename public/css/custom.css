@@ -1,0 +1,18 @@
+  /* created by : ابراهيم المحمدي */
+  
+  body {
+      color: #ffffff;
+      background-color: #262626;
+  }
+  
+  .nav-green {
+      background-color: #036519;
+  }
+  
+  .card {
+      color: #036519;
+  }
+  
+  .rounded-pill {
+      border-radius: 5%;
+  }

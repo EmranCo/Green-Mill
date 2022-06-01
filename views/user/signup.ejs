@@ -1,0 +1,41 @@
+<!-- created by : محمد الغزي -->
+
+
+<%- include('../partials/header') -%>
+    <%- include('../partials/navbar') -%>
+        <div class="container">
+            <div class="row mt-4">
+                <div class="col-md-5 mt-5 ml-auto mr-auto">
+                    <div class="border border-light rounded-pill p-4 shadow ">
+                        <h1 class="display-4">Sign up </h1>
+                        <hr>
+
+                        <%- include('../partials/flashMessages') -%>
+
+                            <form action="/users/signup" method="post">
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="text" name="email" id="email" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input type="password" name="password" id="password" class="form-control">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="confirm_password">Confirm Password</label>
+                                    <input type="password" name="confirm_password" id="confirm_password" class="form-control">
+                                </div>
+
+
+                                <div class="form-group mt-5 text-center">
+                                    <button type="submit" class="btn btn-light w-50"> Signup</button>
+                                </div>
+                            </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <%- include('../partials/footer') -%>

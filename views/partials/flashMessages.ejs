@@ -1,0 +1,37 @@
+<!-- created by : محمد الغزي -->
+
+
+
+<!-- Check if there is any errors -->
+<% if (locals.errors) {%>
+    <% errors.forEach((err)=> {%>
+        <div class="alert alert-danger">
+            <%= err.msg%>
+        </div>
+        <%})%>
+
+            <%}%>
+
+
+                <% if (locals.message && message !="") {%>
+
+                    <div class="alert alert-success">
+                        <%= message%>
+                    </div>
+                    <%}%>
+
+                        <!-- Error Message -->
+                        <% if (locals.error && error !="") {%>
+
+                            <div class="alert alert-danger">
+                                <%= error%>
+                            </div>
+                            <%}%>
+
+                                <!-- Success Message -->
+                                <% if (locals.success && success !="") {%>
+
+                                    <div class="alert alert-success">
+                                        <%= success%>
+                                    </div>
+                                    <%}%>

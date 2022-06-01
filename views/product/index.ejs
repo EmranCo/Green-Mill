@@ -1,0 +1,70 @@
+<!-- created by : اصيل الزهراني -->
+
+<%- include('../partials/header') -%>
+    <%- include('../partials/navbar') -%>
+        <div class="container">
+
+            <div class="row mt-3">
+                <div class="col md-12">
+                    <%- include('../partials/flashMessages') -%>
+                </div>
+
+            </div>
+
+
+
+            <% chunk.forEach((products)=> {%>
+                <div class="row mt-3">
+
+
+                    <% products.forEach((product)=> {%>
+                        <div class="col-sm-6 col-md-4">
+                            <div class="card">
+
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <%= product.title%>
+                                    </h5>
+                                    <p class="card-text">
+                                        <%= product.type%>
+                                    </p>
+                                    <p>
+                                        <%= product.price%> SAR
+                                    </p>
+                                    <a href="<%=  '/products/show/'  + product.id %>" class="btn text-light nav-green">Show More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <%})%>
+                </div>
+
+                <%})%>
+                    <div class="row">
+                        <div class="col-12 mt-2 mb-4">
+                            <nav aria-label="...">
+                                <ul class="pagination pagination-lg justify-content-center">
+                                    <% for (let i=1 ; i <= Math.ceil(total/5); i++) {%>
+
+                                        <% if (pageNo == i) {%>
+                                            <li class="page-item active">
+                                                <a class="page-link" href="<%= '/products/' + i%>">
+                                                    <%= i%>
+                                                </a>
+                                            </li>
+                                            <%} else { %>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="<%= '/products/' + i%>">
+                                                        <%= i%>
+                                                    </a>
+                                                </li>
+                                                <%}%>
+
+                                                    <%}%>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+        </div>
+
+
+        <%- include('../partials/footer') -%>

@@ -1,0 +1,52 @@
+<!-- created by : ابراهيم العبدالسلام -->
+
+
+<%- include('../partials/header') -%>
+    <%- include('../partials/navbar') -%>
+        <div class="container">
+            <div class="row mt-4">
+                <div class="col-md-8 mt-5 ml-auto mr-auto">
+                    <div class="border border-light rounded-pill p-4 shadow ">
+                        <h1 class="display-4">Add New Product:</h1>
+                        <hr>
+
+                        <!-- 
+                Product name
+                Product Type 
+                Expire Date 
+                Price
+            -->
+                        <%- include('../partials/flashMessages') -%>
+                            <form action="/products/create" method="post">
+                                <div class="form-group">
+                                    <label for="title">Product Name</label>
+                                    <input type="text" name="title" id="tile" class="form-control">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="type">Product Type</label>
+                                    <input type="text" name="type" id="type" class="form-control">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="price">Product Price</label>
+                                    <input type="text" name="price" id="price" class="form-control">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="date">Product Expire Date</label>
+                                    <input type="date" name="date" id="date" class="form-control">
+                                </div>
+
+
+                                <div class="form-group mt-5 text-center">
+                                    <button type="submit" class="btn btn-light w-50"> Create</button>
+                                </div>
+                            </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <%- include('../partials/footer') -%>
