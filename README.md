@@ -1,9 +1,4 @@
-# Events Project using nodejs/MongoDB
-
-This project to show the steps in my youtube course :
-
-* [Node.js-MongoDB](https://www.youtube.com/playlist?list=PLXgJ7cArk9uR_xxd3iZIwTg0mKUDYsxoi) 
-
+# Jobs Project using nodejs/MongoDB
 
 ### Installing
 
